@@ -26,7 +26,7 @@ function Hero() {
 
           {/* Title */}
           <h1 className="hero__title">
-            Building Modern2
+            Building Modern
             <br />
             <span className="hero__title-gradient">React Interfaces</span>
           </h1>
