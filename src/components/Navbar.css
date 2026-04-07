@@ -1,0 +1,117 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 18px 0;
+  transition: var(--transition);
+}
+
+.navbar--scrolled {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  padding: 12px 0;
+  box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.navbar__logo-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero);
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.navbar__logo-text {
+  color: var(--text-primary);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar__link {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.navbar__link:hover {
+  color: var(--primary);
+  background: rgba(124,58,237,0.06);
+}
+
+.navbar__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--gradient-hero);
+  border-radius: var(--radius-full);
+  margin-left: 10px;
+  transition: var(--transition);
+  box-shadow: 0 2px 16px rgba(124,58,237,0.3);
+}
+
+.navbar__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(124,58,237,0.45);
+}
+
+.navbar__burger {
+  display: none;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .navbar__burger { display: block; }
+  .navbar__links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    padding: 80px 32px 32px;
+    gap: 8px;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(30px);
+    border-left: 1px solid rgba(0,0,0,0.08);
+    transition: right 0.35s cubic-bezier(0.22,1,0.36,1);
+    box-shadow: -4px 0 32px rgba(0,0,0,0.08);
+  }
+  .navbar__links--open { right: 0; }
+  .navbar__link { font-size: 1rem; padding: 12px 16px; width: 100%; }
+  .navbar__cta { width: 100%; justify-content: center; margin-left: 0; margin-top: 10px; }
+}

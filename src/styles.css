@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #faf8ff;
+  color: #1a1b21
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, .8);
+  backdrop-filter: blur(20px);
+  z-index: 1000
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #4a4455
+}
+
+.resume-btn,
+.btn.primary {
+  background: linear-gradient(135deg, #5300b7, #6d28d9);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 80px 60px
+}
+
+.hero-left h1 {
+  font-size: 64px;
+  line-height: 1.1
+}
+
+.hero-left h1 span {
+  color: #5300b7
+}
+
+.hero-right img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(109, 40, 217, .12)
+}
+
+.badge,
+.section-label {
+  color: #5300b7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold
+}
+
+.hero-actions {
+  margin-top: 30px
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-right: 12px
+}
+
+.secondary {
+  border: 1px solid #d3bbff;
+  color: #5300b7
+}
+
+.section {
+  padding: 90px 60px
+}
+
+.alt-bg {
+  background: #f4f3fb
+}
+
+.exp-card,
+.project-card,
+.skill-chip,
+.contact-form {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(109, 40, 217, .08)
+}
+
+.exp-card {
+  padding: 30px
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px
+}
+
+.skill-chip {
+  padding: 14px 20px
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px
+}
+
+.project-card {
+  overflow: hidden
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover
+}
+
+.project-card h3 {
+  padding: 20px
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: none;
+  background: #f4f3fb;
+  border-radius: 12px
+}
+
+.contact-form button {
+  padding: 14px;
+  background: linear-gradient(135deg, #5300b7, #6d28d9);
+  color: #fff;
+  border: none;
+  border-radius: 999px
+}
+
+@media(max-width:768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 20px
+  }
+
+  .hero-left h1 {
+    font-size: 42px
+  }
+
+  .section,
+  .navbar {
+    padding: 20px
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr
+  }
+}
